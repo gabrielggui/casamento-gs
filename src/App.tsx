@@ -62,11 +62,11 @@ type Product = {
 
 const PRODUCTS: Product[] = [
   { id: '1', name: 'Jogo de Xícaras de Âmbar', price: 195.00, available: true, imageFallback: 'JX', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGU9xdf_CNWDwmd5hQfak05QpwUIQxE_kHYzTR_LYk3m-QejF_mexIxHY&s=10', category: 'Cozinha' },
-  { id: '2', name: 'Aspirador de Pó e Água Vertical PAS3000 Philco', price: 325.00, available: true, imageFallback: 'AP', imageUrl: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=600&auto=format&fit=crop', category: 'Eletrodomésticos' },
-  { id: '3', name: 'Fondue Romântico nas Montanhas', price: 325.00, available: true, imageFallback: 'FR', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY2qWjTug6o8ubI-yuYcM-FQ9zbZvD_8S-F7RVyutuFM6PGpCYcoY6DQc&s=10', category: 'Gastronomia & Experiências' },
+  { id: '2', name: 'Aspirador de Pó e Água Vertical', price: 325.00, available: true, imageFallback: 'AP', imageUrl: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=600&auto=format&fit=crop', category: 'Eletrodomésticos' },
+  { id: '3', name: 'Noite do Fondue', price: 325.00, available: true, imageFallback: 'FR', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY2qWjTug6o8ubI-yuYcM-FQ9zbZvD_8S-F7RVyutuFM6PGpCYcoY6DQc&s=10', category: 'Gastronomia & Experiências' },
   { id: '4', name: 'Degustação de Vinhos e Espumantes', price: 260.00, available: true, imageFallback: 'DV', imageUrl: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600&auto=format&fit=crop', category: 'Gastronomia & Experiências' },
   { id: '5', name: 'Café Colonial Completo', price: 234.00, available: true, imageFallback: 'CC', imageUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/20/05/b7/7f/siga-nosso-instagram.jpg?w=500&h=-1&s=1', category: 'Gastronomia & Experiências' },
-  { id: '6', name: 'Chá da Tarde no Palácio', price: 195.00, available: true, imageFallback: 'CT', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQla66fmKotVM62OampjFFdppWo29Rz5Qcl0W9Rqchz0w&s=10', category: 'Gastronomia & Experiências' },
+  { id: '6', name: 'Chá da Tarde', price: 195.00, available: true, imageFallback: 'CT', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQla66fmKotVM62OampjFFdppWo29Rz5Qcl0W9Rqchz0w&s=10', category: 'Gastronomia & Experiências' },
   { id: '7', name: 'Noite Italiana', price: 325.00, available: true, imageFallback: 'NI', imageUrl: 'https://noiteitaliana.tur.br/wp-content/uploads/2019/03/IMG_3730_menor234.jpg', category: 'Gastronomia & Experiências' },
   { id: '8', name: 'Massagem Relaxante para o Casal', price: 390.00, available: true, imageFallback: 'MR', imageUrl: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=600&auto=format&fit=crop', category: 'Aconchego & Bem-Estar' },
   { id: '9', name: 'Banho de Imersão e Hidratação', price: 234.00, available: true, imageFallback: 'BI', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3OsRRt467dj-MM3Jmmqb7TAAXq0TqpaN0wSUpwwxY6os0cFDezKjskjHb&s=10', category: 'Aconchego & Bem-Estar' },
@@ -79,7 +79,7 @@ const PRODUCTS: Product[] = [
   { id: '16', name: 'Transporte Confortável', price: 260.00, available: true, imageFallback: 'TC', imageUrl: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' },
   { id: '17', name: 'Caixa de Chocolates Artesanais', price: 99.00, available: true, imageFallback: 'CH', imageUrl: 'https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' },
   { id: '18', name: 'Jogo De Pratos Fundos Em Porcelana Ryo Com 6 Peças', price: 199.00, available: true, imageFallback: 'JP', imageUrl: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcScxP3_hg2eiUV5EuZwJuHY2ktM3_8PbVp3XvaNkZC6L4-4YbvjaPUXRrXrgr-0iOkOK7XaADA2WmLsUv6iWdPbT7ns6_Kz__4KOFT985EBs0I6V_JRX7itXEI', category: 'Cozinha' },
-  { id: '19', name: 'Bebedouro de Água Esmaltec', price: 696.00, available: true, imageFallback: 'BA', imageUrl: 'https://m.magazineluiza.com.br/a-static/420x420/bebedouro-de-agua-esmaltec-de-coluna-refrigerado-por-compressor-egc35b/magazineluiza/010300601/a576ff560c4150012e9d9215562ddf09.jpg', category: 'Eletrodomésticos' }
+  { id: '19', name: 'Bebedouro de Água', price: 696.00, available: true, imageFallback: 'BA', imageUrl: 'https://m.magazineluiza.com.br/a-static/420x420/bebedouro-de-agua-esmaltec-de-coluna-refrigerado-por-compressor-egc35b/magazineluiza/010300601/a576ff560c4150012e9d9215562ddf09.jpg', category: 'Eletrodomésticos' }
 ];
 
 export default function App() {
