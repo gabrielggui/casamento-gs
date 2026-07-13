@@ -307,7 +307,7 @@ export default function App() {
               </div>
 
               <h2 className="font-serif text-[24px] md:text-[28px] text-olive-green italic mb-[20px]">
-                Aos Nossos Amados Familiares e Amigos 💖,
+                Aos Nossos Amados Familiares e Amigos 💖
               </h2>
               <p className="text-[#666] text-[15px] md:text-[16px] font-light leading-[1.8] mb-[20px] text-justify md:text-center">
                 Se vocês estão aqui, é porque de alguma forma entrelaçaram suas histórias com a nossa. Celebrar nosso amor sem a presença, as risadas e as bênçãos de vocês não teria o mesmo sentido. Cada sorriso compartilhado nos trouxe até esse momento mágico. Preparamos este espaço com todo o nosso coração, para que possam sonhar nossos sonhos junto conosco.
@@ -335,7 +335,7 @@ export default function App() {
                 Saber que estarão ao nosso lado no dia mais feliz de nossas vidas é o que torna esse sonho completo. Por favor, nos ajudem a preparar uma noite inesquecível confirmando sua presença abaixo.
               </p>
               <a
-                href={import.meta.env.VITE_RSVP_URL || 'https://forms.google.com/'}
+                href={import.meta.env.VITE_RSVP_URL || 'https://docs.google.com/forms/d/1N2PlEX_5KKEay-CxVNe9M0XkzlRdldj0bdKMWwf2Uw4/preview'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block py-[14px] px-[36px] rounded-[8px] bg-olive-green text-white font-semibold uppercase tracking-[2px] text-[14px] hover:bg-olive-dark shadow-[0_4px_14px_rgba(85,107,47,0.3)] transition-all cursor-pointer"
@@ -657,7 +657,7 @@ export default function App() {
                 {modalStep === 'pix' && (
                   <div className="flex flex-col items-center gap-6">
                     <div className="text-center mb-2">
-                      <h3 className="font-serif text-[24px] text-olive-green italic mb-2">Obrigado(a), {senderName.split(' ')[0]}! ❤️</h3>
+                      <h3 className="font-serif text-[24px] text-olive-green italic mb-2">Obrigado(a), {senderName}! ❤️</h3>
                       <p className="text-[14px] text-gray-500 leading-relaxed">
                         Recebemos seu presente com muita alegria. Utilize o QR Code ou copie a chave PIX abaixo para nos presentear com <strong className="text-olive-green">{formatPrice(totalAmount)}</strong>.
                       </p>
