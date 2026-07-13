@@ -585,7 +585,7 @@ export default function App() {
               initial={{ scale: 0.95, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
-              className="bg-white rounded-[16px] shadow-2xl w-full max-w-md overflow-hidden flex flex-col max-h-[90vh]"
+              className={`bg-white rounded-[16px] shadow-2xl w-full max-w-md overflow-hidden flex flex-col transition-all duration-500 ease-out md:transition-none ${modalStep === 'pix' ? 'max-h-[95vh] h-auto md:max-h-[90vh]' : modalStep === 'name' ? 'max-h-[450px] md:max-h-[90vh]' : 'max-h-[85vh] md:max-h-[90vh]'}`}
             >
               <div className="flex items-center justify-between p-6 border-b border-gray-100">
                 {modalStep !== 'cart' ? (
@@ -610,7 +610,7 @@ export default function App() {
                 </button>
               </div>
 
-              <div className="p-6 overflow-y-auto flex-grow max-h-[50vh]">
+              <div className={`p-6 overflow-y-auto flex-grow transition-all duration-500 ease-out md:transition-none ${modalStep === 'pix' ? 'max-h-[75vh] md:max-h-[50vh]' : modalStep === 'name' ? 'max-h-[250px] md:max-h-[50vh]' : 'max-h-[50vh]'}`}>
                 {modalStep === 'cart' && (
                   <div className="flex flex-col gap-4">
                     {selectedItems.length === 0 ? (
