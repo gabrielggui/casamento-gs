@@ -77,7 +77,9 @@ const PRODUCTS: Product[] = [
   { id: '14', name: 'Foto Profissional de Casal', price: 364.00, available: true, imageFallback: 'FP', imageUrl: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' },
   { id: '15', name: 'Buquê de Flores no Quarto', price: 156.00, available: true, imageFallback: 'BF', imageUrl: 'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' },
   { id: '16', name: 'Transporte Confortável', price: 260.00, available: true, imageFallback: 'TC', imageUrl: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' },
-  { id: '17', name: 'Caixa de Chocolates Artesanais', price: 99.00, available: true, imageFallback: 'CH', imageUrl: 'https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' }
+  { id: '17', name: 'Caixa de Chocolates Artesanais', price: 99.00, available: true, imageFallback: 'CH', imageUrl: 'https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' },
+  { id: '18', name: 'Jogo De Pratos Fundos Em Porcelana Ryo Com 6 Peças', price: 199.00, available: true, imageFallback: 'JP', imageUrl: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcScxP3_hg2eiUV5EuZwJuHY2ktM3_8PbVp3XvaNkZC6L4-4YbvjaPUXRrXrgr-0iOkOK7XaADA2WmLsUv6iWdPbT7ns6_Kz__4KOFT985EBs0I6V_JRX7itXEI', category: 'Cozinha' },
+  { id: '19', name: 'Bebedouro de Água Esmaltec', price: 696.00, available: true, imageFallback: 'BA', imageUrl: 'https://m.magazineluiza.com.br/a-static/420x420/bebedouro-de-agua-esmaltec-de-coluna-refrigerado-por-compressor-egc35b/magazineluiza/010300601/a576ff560c4150012e9d9215562ddf09.jpg', category: 'Eletrodomésticos' }
 ];
 
 export default function App() {
@@ -256,7 +258,7 @@ export default function App() {
             <div className="absolute inset-0 bg-black/30 z-10"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-off-white via-transparent to-transparent z-10"></div>
             <img 
-              src="https://i.ibb.co/XM4Cw1q/IMG-20260711-WA0006.jpg" 
+              src="https://casamentogabrielesara.com.br/assets/IMG-20260711-WA0006.jpg" 
               alt="Sara e Gabriel"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -289,14 +291,14 @@ export default function App() {
                 <div className="relative flex items-center justify-center">
                   <div className="w-[100px] h-[100px] rounded-full border-[3px] border-white shadow-[0_4px_15px_rgba(0,0,0,0.05)] overflow-hidden z-20 translate-x-[15px] bg-sage-soft">
                     <img 
-                      src="https://i.ibb.co/WW4NXdgT/file-00000000033c71f5ad4dbc8b6e1042c8.png" 
+                      src="https://casamentogabrielesara.com.br/assets/file-00000000033c71f5ad4dbc8b6e1042c8.png" 
                       alt="Sara" 
                       className="w-full h-full object-cover transition-all duration-500 hover:scale-110" 
                     />
                   </div>
                   <div className="w-[100px] h-[100px] rounded-full border-[3px] border-white shadow-[0_4px_15px_rgba(0,0,0,0.05)] overflow-hidden z-10 -translate-x-[15px] bg-sage-soft">
                     <img 
-                      src="https://i.ibb.co/Kj9HmF5M/IMG-20260711-WA0004-2.jpg" 
+                      src="https://casamentogabrielesara.com.br/assets/IMG-20260711-WA0004-2.jpg" 
                       alt="Gabriel" 
                       className="w-full h-full object-cover transition-all duration-500 hover:scale-110" 
                     />
@@ -305,7 +307,7 @@ export default function App() {
               </div>
 
               <h2 className="font-serif text-[24px] md:text-[28px] text-olive-green italic mb-[20px]">
-                Aos Nossos Amados Familiares e Amigos,
+                Aos Nossos Amados Familiares e Amigos 💖,
               </h2>
               <p className="text-[#666] text-[15px] md:text-[16px] font-light leading-[1.8] mb-[20px] text-justify md:text-center">
                 Se vocês estão aqui, é porque de alguma forma entrelaçaram suas histórias com a nossa. Celebrar nosso amor sem a presença, as risadas e as bênçãos de vocês não teria o mesmo sentido. Cada sorriso compartilhado nos trouxe até esse momento mágico. Preparamos este espaço com todo o nosso coração, para que possam sonhar nossos sonhos junto conosco.
@@ -338,7 +340,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="inline-block py-[14px] px-[36px] rounded-[8px] bg-olive-green text-white font-semibold uppercase tracking-[2px] text-[14px] hover:bg-olive-dark shadow-[0_4px_14px_rgba(85,107,47,0.3)] transition-all cursor-pointer"
               >
-                Confirmar Presença
+                Confirmar Presença 💌
               </a>
             </motion.div>
           </section>
@@ -363,7 +365,7 @@ export default function App() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-[#666] text-[15px] md:text-[16px] font-light leading-[1.6]"
             >
-              Ter vocês dividindo essa emoção já é o maior presente que poderíamos receber! Porém, aos que desejarem nos abençoar com um presente, separamos com carinho algumas opções abaixo:
+              Ter vocês dividindo essa emoção já é o maior presente que poderíamos receber! Porém, aos que desejarem nos abençoar com um presente, separamos com carinho algumas opções abaixo: 🎁
             </motion.p>
           </section>
 
@@ -376,7 +378,7 @@ export default function App() {
                   <Search size={18} strokeWidth={2.5} className="text-[#A0B090] mr-3 shrink-0" />
                   <input
                     type="text"
-                    placeholder="Buscar presente..."
+                    placeholder="Buscar presente... 🔍"
                     value={searchQuery}
                     onChange={(e) => {
                       setSearchQuery(e.target.value);
@@ -399,8 +401,8 @@ export default function App() {
                     className="w-full md:w-auto md:min-w-[150px] bg-transparent border-none focus:outline-none text-[15px] text-anthracite font-medium cursor-pointer appearance-none outline-none pr-6 mix-blend-multiply"
                   >
                     <option value="name">Alfabética (A-Z)</option>
-                    <option value="priceAsc">Menor Preço</option>
-                    <option value="priceDesc">Maior Preço</option>
+                    <option value="priceAsc">Menor Preço ⬇️</option>
+                    <option value="priceDesc">Maior Preço ⬆️</option>
                   </select>
                   {/* Custom dropdown arrow */}
                   <div className="absolute right-5 pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity text-olive-green flex items-center">
@@ -500,10 +502,10 @@ export default function App() {
                           >
                             {isSelected ? (
                               <>
-                                <Check size={14} strokeWidth={3} /> Selecionado
+                                <Check size={14} strokeWidth={3} /> Selecionado ✅
                               </>
                             ) : (
-                              'Presentear'
+                              'Presentear 🎁'
                             )}
                           </button>
                         </div>
@@ -526,7 +528,7 @@ export default function App() {
                       onClick={() => setVisibleCount(prev => prev + 12)}
                       className="pointer-events-auto py-[14px] px-[36px] rounded-[8px] bg-white border border-[#EAEFE4] text-olive-green font-semibold uppercase tracking-[1px] text-[13px] hover:bg-[#F8FAF6] shadow-[0_4px_14px_rgba(0,0,0,0.05)] transition-all cursor-pointer mb-2"
                     >
-                      Exibir Mais Presentes
+                      Exibir Mais Presentes 💝
                     </button>
                   </motion.div>
                 )}
@@ -545,7 +547,7 @@ export default function App() {
                 <path d="M1046 2744 c-135 -33 -258 -134 -319 -261 -29 -63 -32 -78 -35 -186 -3 -88 0 -129 12 -164 19 -56 20 -63 3 -63 -28 0 -176 -81 -253 -138 -449 -337 -555 -968 -243 -1442 171 -261 424 -425 733 -475 271 -44 567 24 771 178 70 53 183 168 210 215 11 17 23 32 27 32 4 0 8 -62 8 -138 0 -158 -1 -155 89 -225 l61 -48 0 481 c0 425 2 486 16 516 19 39 53 60 113 70 102 16 34 24 -209 24 -172 0 -259 -3 -255 -10 3 -5 16 -10 28 -10 36 0 93 -19 114 -38 12 -9 26 -35 32 -57 12 -44 14 -350 2 -431 -10 -74 -62 -155 -161 -254 -155 -155 -319 -226 -546 -237 -572 -29 -1121 552 -1080 1144 21 304 168 568 401 716 64 40 157 87 175 87 3 0 22 -23 40 -52 51 -79 151 -179 279 -281 294 -233 407 -361 452 -509 32 -103 24 -230 -19 -322 -96 -206 -352 -284 -571 -175 -115 58 -196 151 -241 277 -13 34 -27 62 -32 62 -5 0 -8 -62 -7 -145 l2 -146 28 -20 c39 -28 131 -67 214 -92 58 -18 95 -21 220 -21 129 0 158 4 209 22 153 56 265 171 316 323 19 55 22 81 18 189 l-4 125 -47 98 c-42 86 -61 111 -150 201 -56 56 -153 143 -216 192 -208 162 -345 293 -327 311 12 12 215 4 286 -13 193 -43 375 -148 530 -304 64 -66 115 -135 194 -262 16 -27 19 -28 101 -28 52 0 85 4 85 10 0 6 -14 39 -31 73 -127 251 -362 459 -616 547 -181 62 -407 75 -579 34 -18 -5 -25 4 -47 55 -95 218 17 470 232 522 80 20 185 15 252 -10 105 -40 198 -145 235 -266 10 -33 22 -64 26 -70 5 -5 7 58 6 140 l-3 150 -70 37 c-133 70 -320 96 -459 62z"/>
               </g>
             </svg>
-            <div className="font-serif text-olive-green italic mb-[2px] text-[18px]">Com carinho, Sara e Gabriel</div>
+            <div className="font-serif text-olive-green italic mb-[2px] text-[18px]">Com carinho, Sara e Gabriel ❤️</div>
           </footer>
 
           {/* Floating Cart */}
@@ -586,7 +588,7 @@ export default function App() {
               className="bg-white rounded-[16px] shadow-2xl w-full max-w-md overflow-hidden flex flex-col max-h-[90vh]"
             >
               <div className="flex items-center justify-between p-6 border-b border-gray-100">
-                {modalStep !== 'cart' && modalStep !== 'thanks' ? (
+                {modalStep !== 'cart' ? (
                   <button onClick={() => setModalStep(modalStep === 'pix' ? 'name' : 'cart')} className="text-gray-400 hover:text-gray-600 transition-colors cursor-pointer">
                     <ChevronLeft size={24} />
                   </button>
@@ -594,16 +596,14 @@ export default function App() {
                   <div className="w-6"></div>
                 )}
                 <h2 className="font-serif text-[20px] text-olive-green text-center flex-grow">
-                  {modalStep === 'cart' ? 'Itens Selecionados' : modalStep === 'name' ? 'Identificação' : modalStep === 'thanks' ? 'Gratidão' : 'Pagamento PIX'}
+                  {modalStep === 'cart' ? 'Itens Selecionados 🎁' : modalStep === 'name' ? 'Identificação 📝' : 'Pagamento PIX 💸'}
                 </h2>
                 <button onClick={() => {
-                  if (modalStep === 'thanks') {
-                    setIsModalOpen(false);
+                  setIsModalOpen(false);
+                  if (modalStep === 'pix') {
                     setSelectedItems([]);
                     setSenderName('');
                     setTimeout(() => setModalStep('cart'), 300);
-                  } else {
-                    setIsModalOpen(false);
                   }
                 }} className="text-gray-400 hover:text-gray-600 transition-colors cursor-pointer">
                   <X size={24} />
@@ -641,13 +641,14 @@ export default function App() {
                 {modalStep === 'name' && (
                   <div className="flex flex-col gap-4">
                     <p className="text-[14px] text-gray-500 mb-2 text-center leading-relaxed">
-                      Por favor, nos diga quem está enviando este mimo para podermos agradecer de coração.
+                      Por favor, nos diga quem está enviando este mimo para podermos agradecer de coração. 🥰
                     </p>
                     <input 
                       type="text" 
                       value={senderName}
                       onChange={(e) => setSenderName(e.target.value)}
-                      placeholder="Ex: João e Maria Silva"
+                      maxLength={20}
+                      placeholder="Ex: João e Maria"
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-olive-green focus:ring-1 focus:ring-olive-green transition-all text-[14px]"
                       autoFocus
                     />
@@ -656,12 +657,15 @@ export default function App() {
 
                 {modalStep === 'pix' && (
                   <div className="flex flex-col items-center gap-6">
-                    <p className="text-[14px] text-gray-500 text-center leading-relaxed">
-                      Utilize o QR Code ou copie a chave PIX abaixo para nos presentear com <strong className="text-olive-green">{formatPrice(totalAmount)}</strong>. Somos imensamente gratos!
-                    </p>
+                    <div className="text-center mb-2">
+                      <h3 className="font-serif text-[24px] text-olive-green italic mb-2">Obrigado(a), {senderName.split(' ')[0]}! ❤️</h3>
+                      <p className="text-[14px] text-gray-500 leading-relaxed">
+                        Recebemos seu presente com muita alegria. Utilize o QR Code ou copie a chave PIX abaixo para nos presentear com <strong className="text-olive-green">{formatPrice(totalAmount)}</strong>.
+                      </p>
+                    </div>
 
                     <div className="w-full bg-[#FAFBF9] p-4 rounded-xl border border-[#EAEFE4] relative">
-                      <p className="text-[11px] text-gray-400 mb-2 font-bold uppercase tracking-[1.5px] text-center">PIX Copia e Cola</p>
+                      <p className="text-[11px] text-gray-400 mb-2 font-bold uppercase tracking-[1.5px] text-center">PIX Copia e Cola 📋</p>
                       <div className="flex items-center justify-between gap-3 bg-white p-2 rounded-lg border border-[#F0F2ED] shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
                         <input 
                           type="text" 
@@ -688,23 +692,9 @@ export default function App() {
                   </div>
                 )}
 
-                {modalStep === 'thanks' && (
-                  <motion.div 
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="flex flex-col items-center gap-6 text-center py-6"
-                  >
-                    <div className="w-[80px] h-[80px] bg-[#F8FAF6] rounded-full flex items-center justify-center mb-2">
-                      <Heart size={40} className="text-olive-green fill-olive-green" />
-                    </div>
-                    <h3 className="font-serif text-[24px] text-olive-green italic">Do Fundo do Nosso Coração, Obrigado(a), {senderName.split(' ')[0]}!</h3>
-                    <p className="text-[15px] text-gray-500 leading-relaxed max-w-[300px]">
-                      Recebemos seu presente com muita alegria. Seu carinho nos ajuda a dar os primeiros passos na construção do nosso novo lar!
-                    </p>
-                  </motion.div>
-                )}
               </div>
 
+              {modalStep !== 'pix' && (
               <div className="p-6 border-t border-gray-100 bg-white">
                 {modalStep === 'cart' && (
                   <button 
@@ -714,7 +704,7 @@ export default function App() {
                       ${selectedItems.length === 0 ? 'bg-[#EEE] text-[#AAA] cursor-not-allowed' : 'bg-olive-green text-white hover:bg-olive-dark shadow-[0_4px_14px_rgba(85,107,47,0.3)] cursor-pointer'}
                     `}
                   >
-                    Concluir Presente
+                    Concluir Presente ✨
                   </button>
                 )}
 
@@ -726,35 +716,12 @@ export default function App() {
                       ${senderName.trim().length < 3 ? 'bg-[#EEE] text-[#AAA] cursor-not-allowed' : 'bg-olive-green text-white hover:bg-olive-dark shadow-[0_4px_14px_rgba(85,107,47,0.3)] cursor-pointer'}
                     `}
                   >
-                    Gerar PIX
+                    Gerar PIX ✨
                   </button>
                 )}
 
-                {modalStep === 'pix' && (
-                  <button 
-                    onClick={() => {
-                      setModalStep('thanks');
-                    }}
-                    className="w-full py-[12px] rounded-[8px] font-semibold uppercase tracking-[1px] text-[13px] bg-olive-green text-white hover:bg-olive-dark shadow-[0_4px_14px_rgba(85,107,47,0.3)] transition-all cursor-pointer"
-                  >
-                    Finalizar
-                  </button>
-                )}
-
-                {modalStep === 'thanks' && (
-                  <button 
-                    onClick={() => {
-                      setIsModalOpen(false);
-                      setSelectedItems([]);
-                      setSenderName('');
-                      setTimeout(() => setModalStep('cart'), 300);
-                    }}
-                    className="w-full py-[12px] rounded-[8px] font-semibold uppercase tracking-[1px] text-[13px] bg-olive-green text-white hover:bg-olive-dark shadow-[0_4px_14px_rgba(85,107,47,0.3)] transition-all cursor-pointer"
-                  >
-                    Voltar para a Lista
-                  </button>
-                )}
               </div>
+              )}
             </motion.div>
           </motion.div>
         )}
