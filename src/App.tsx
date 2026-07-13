@@ -14,7 +14,7 @@ function generatePixPayload(key: string, amount: number, senderName: string, pro
 
   const keyClean = key.replace(/[^0-9]/g, '');
   const senderClean = sanitizeStr(senderName) || 'Presente';
-  const desc = `${senderClean} - ${sanitizeStr(productNames)}`.substring(0, 80);
+  const desc = `${senderClean} - ${sanitizeStr(productNames)}`.substring(0, 30);
   
   let accountInfo = format('00', 'br.gov.bcb.pix') + format('01', keyClean);
   if (desc) {
@@ -61,22 +61,22 @@ type Product = {
 };
 
 const PRODUCTS: Product[] = [
-  { id: '1', name: 'Jogo de Xícaras de Âmbar', price: 150.00, available: true, imageFallback: 'JX', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGU9xdf_CNWDwmd5hQfak05QpwUIQxE_kHYzTR_LYk3m-QejF_mexIxHY&s=10', category: 'Cozinha' },
-  { id: '2', name: 'Aspirador de Pó e Água Vertical PAS3000 Philco', price: 250.00, available: true, imageFallback: 'AP', imageUrl: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=600&auto=format&fit=crop', category: 'Eletrodomésticos' },
-  { id: '3', name: 'Fondue Romântico nas Montanhas', price: 250.00, available: true, imageFallback: 'FR', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY2qWjTug6o8ubI-yuYcM-FQ9zbZvD_8S-F7RVyutuFM6PGpCYcoY6DQc&s=10', category: 'Gastronomia & Experiências' },
-  { id: '4', name: 'Degustação de Vinhos e Espumantes', price: 200.00, available: true, imageFallback: 'DV', imageUrl: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600&auto=format&fit=crop', category: 'Gastronomia & Experiências' },
-  { id: '5', name: 'Café Colonial Completo', price: 180.00, available: true, imageFallback: 'CC', imageUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/20/05/b7/7f/siga-nosso-instagram.jpg?w=500&h=-1&s=1', category: 'Gastronomia & Experiências' },
-  { id: '6', name: 'Chá da Tarde no Palácio', price: 150.00, available: true, imageFallback: 'CT', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQla66fmKotVM62OampjFFdppWo29Rz5Qcl0W9Rqchz0w&s=10', category: 'Gastronomia & Experiências' },
-  { id: '7', name: 'Noite Italiana', price: 250.00, available: true, imageFallback: 'NI', imageUrl: 'https://noiteitaliana.tur.br/wp-content/uploads/2019/03/IMG_3730_menor234.jpg', category: 'Gastronomia & Experiências' },
-  { id: '8', name: 'Massagem Relaxante para o Casal', price: 300.00, available: true, imageFallback: 'MR', imageUrl: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=600&auto=format&fit=crop', category: 'Aconchego & Bem-Estar' },
-  { id: '9', name: 'Banho de Imersão e Hidratação', price: 180.00, available: true, imageFallback: 'BI', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3OsRRt467dj-MM3Jmmqb7TAAXq0TqpaN0wSUpwwxY6os0cFDezKjskjHb&s=10', category: 'Aconchego & Bem-Estar' },
-  { id: '10', name: 'Ingresso para o Snowland', price: 300.00, available: true, imageFallback: 'IS', imageUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/79/71/7a/snowland.jpg?w=900&h=500&s=1', category: 'Passeios & Aventura' },
-  { id: '11', name: 'Passeio de Maria Fumaça', price: 280.00, available: true, imageFallback: 'MF', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4wLUCzuWKplVX76tnI10m6z4EhxdsmTH-qTvhmU5trpWdtjv5mHb7aXI&s=10', category: 'Passeios & Aventura' },
-  { id: '12', name: 'Visita ao Mundo a Vapor / Mini Mundo', price: 160.00, available: true, imageFallback: 'MM', imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnAlnGcwQj5jCkXAd10n0WtI-JaBwm8rbNOwrPnzDpxtE0wOU9YZF-obOY_mKNthXJa0VtqSpWGh--lASoQDZqCf84egkpUVvFwXPQUP6gQJPDzVFyu8NeY9_g0hYI9zc0afxI_=s1370-w768-h1370-rw', category: 'Passeios & Aventura' },
-  { id: '13', name: 'Passeio Privativo pelos Cânions', price: 300.00, available: true, imageFallback: 'PC', imageUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5a/ba/09/caption.jpg?w=1200&h=-1&s=1', category: 'Passeios & Aventura' },
-  { id: '14', name: 'Foto Profissional de Casal', price: 280.00, available: true, imageFallback: 'FP', imageUrl: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' },
-  { id: '15', name: 'Buquê de Flores no Quarto', price: 120.00, available: true, imageFallback: 'BF', imageUrl: 'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' },
-  { id: '16', name: 'Transporte Confortável', price: 200.00, available: true, imageFallback: 'TC', imageUrl: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' },
+  { id: '1', name: 'Jogo de Xícaras de Âmbar', price: 195.00, available: true, imageFallback: 'JX', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGU9xdf_CNWDwmd5hQfak05QpwUIQxE_kHYzTR_LYk3m-QejF_mexIxHY&s=10', category: 'Cozinha' },
+  { id: '2', name: 'Aspirador de Pó e Água Vertical PAS3000 Philco', price: 325.00, available: true, imageFallback: 'AP', imageUrl: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=600&auto=format&fit=crop', category: 'Eletrodomésticos' },
+  { id: '3', name: 'Fondue Romântico nas Montanhas', price: 325.00, available: true, imageFallback: 'FR', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY2qWjTug6o8ubI-yuYcM-FQ9zbZvD_8S-F7RVyutuFM6PGpCYcoY6DQc&s=10', category: 'Gastronomia & Experiências' },
+  { id: '4', name: 'Degustação de Vinhos e Espumantes', price: 260.00, available: true, imageFallback: 'DV', imageUrl: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600&auto=format&fit=crop', category: 'Gastronomia & Experiências' },
+  { id: '5', name: 'Café Colonial Completo', price: 234.00, available: true, imageFallback: 'CC', imageUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/20/05/b7/7f/siga-nosso-instagram.jpg?w=500&h=-1&s=1', category: 'Gastronomia & Experiências' },
+  { id: '6', name: 'Chá da Tarde no Palácio', price: 195.00, available: true, imageFallback: 'CT', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQla66fmKotVM62OampjFFdppWo29Rz5Qcl0W9Rqchz0w&s=10', category: 'Gastronomia & Experiências' },
+  { id: '7', name: 'Noite Italiana', price: 325.00, available: true, imageFallback: 'NI', imageUrl: 'https://noiteitaliana.tur.br/wp-content/uploads/2019/03/IMG_3730_menor234.jpg', category: 'Gastronomia & Experiências' },
+  { id: '8', name: 'Massagem Relaxante para o Casal', price: 390.00, available: true, imageFallback: 'MR', imageUrl: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=600&auto=format&fit=crop', category: 'Aconchego & Bem-Estar' },
+  { id: '9', name: 'Banho de Imersão e Hidratação', price: 234.00, available: true, imageFallback: 'BI', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3OsRRt467dj-MM3Jmmqb7TAAXq0TqpaN0wSUpwwxY6os0cFDezKjskjHb&s=10', category: 'Aconchego & Bem-Estar' },
+  { id: '10', name: 'Ingresso para o Snowland', price: 390.00, available: true, imageFallback: 'IS', imageUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/79/71/7a/snowland.jpg?w=900&h=500&s=1', category: 'Passeios & Aventura' },
+  { id: '11', name: 'Passeio de Maria Fumaça', price: 364.00, available: true, imageFallback: 'MF', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4wLUCzuWKplVX76tnI10m6z4EhxdsmTH-qTvhmU5trpWdtjv5mHb7aXI&s=10', category: 'Passeios & Aventura' },
+  { id: '12', name: 'Visita ao Mundo a Vapor / Mini Mundo', price: 208.00, available: true, imageFallback: 'MM', imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnAlnGcwQj5jCkXAd10n0WtI-JaBwm8rbNOwrPnzDpxtE0wOU9YZF-obOY_mKNthXJa0VtqSpWGh--lASoQDZqCf84egkpUVvFwXPQUP6gQJPDzVFyu8NeY9_g0hYI9zc0afxI_=s1370-w768-h1370-rw', category: 'Passeios & Aventura' },
+  { id: '13', name: 'Passeio Privativo pelos Cânions', price: 390.00, available: true, imageFallback: 'PC', imageUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5a/ba/09/caption.jpg?w=1200&h=-1&s=1', category: 'Passeios & Aventura' },
+  { id: '14', name: 'Foto Profissional de Casal', price: 364.00, available: true, imageFallback: 'FP', imageUrl: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' },
+  { id: '15', name: 'Buquê de Flores no Quarto', price: 156.00, available: true, imageFallback: 'BF', imageUrl: 'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' },
+  { id: '16', name: 'Transporte Confortável', price: 260.00, available: true, imageFallback: 'TC', imageUrl: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' },
   { id: '17', name: 'Caixa de Chocolates Artesanais', price: 99.00, available: true, imageFallback: 'CH', imageUrl: 'https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=600&auto=format&fit=crop', category: 'Gestos de Carinho' }
 ];
 
