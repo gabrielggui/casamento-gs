@@ -650,7 +650,6 @@ export default function App() {
                       maxLength={20}
                       placeholder="Ex: João e Maria"
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-olive-green focus:ring-1 focus:ring-olive-green transition-all text-[14px]"
-                      autoFocus
                     />
                   </div>
                 )}
