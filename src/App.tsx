@@ -661,6 +661,9 @@ export default function App() {
                       <p className="text-[14px] text-gray-500 leading-relaxed">
                         Recebemos seu presente com muita alegria. Utilize o QR Code ou copie a chave PIX abaixo para nos presentear com <strong className="text-olive-green">{formatPrice(totalAmount)}</strong>.
                       </p>
+                      <div className="mt-3 inline-block bg-[#EAEFE4] text-olive-green px-3 py-1.5 rounded-full text-[12px] font-medium">
+                        ✨ O seu presente chega 100% para nós, sem taxas!
+                      </div>
                     </div>
 
                     <div className="w-full bg-[#FAFBF9] p-4 rounded-xl border border-[#EAEFE4] relative">
