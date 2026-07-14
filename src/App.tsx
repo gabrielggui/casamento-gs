@@ -14,7 +14,7 @@ function generatePixPayload(key: string, amount: number, senderName: string, pro
 
   const keyClean = key.replace(/[^0-9]/g, '');
   const senderClean = sanitizeStr(senderName) || 'Presente';
-  const desc = `${senderClean} - ${sanitizeStr(productNames)}`.substring(0, 30);
+  const desc = `${senderClean} - ${sanitizeStr(productNames)}`.substring(0, 60);
   
   let accountInfo = format('00', 'br.gov.bcb.pix') + format('01', keyClean);
   if (desc) {
@@ -96,6 +96,7 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
   const [visibleCount, setVisibleCount] = useState(12);
   const [isCopied, setIsCopied] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
   
   const categoriesRef = useRef<HTMLDivElement>(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
@@ -114,6 +115,18 @@ export default function App() {
     window.addEventListener('resize', handleScroll);
     return () => window.removeEventListener('resize', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (selectedItems.length > 0) {
+      setShowTooltip(true);
+      const timer = setTimeout(() => {
+        setShowTooltip(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    } else {
+      setShowTooltip(false);
+    }
+  }, [selectedItems.length]);
 
   const categories = ['Todos', ...Array.from(new Set(PRODUCTS.map(p => p.category))).sort()];
 
@@ -134,7 +147,7 @@ export default function App() {
   const handleGeneratePix = () => {
     if (!senderName.trim()) return;
     const productNames = selectedItems.map(id => PRODUCTS.find(p => p.id === id)?.name).filter(Boolean).join(', ');
-    const pixKey = import.meta.env.VITE_PIX_KEY || '70516665413';
+    const pixKey = import.meta.env.VITE_PIX_KEY || '70036358444';
     const payload = generatePixPayload(pixKey, totalAmount, senderName, productNames);
     setPixPayload(payload);
     setModalStep('pix');
@@ -553,20 +566,47 @@ export default function App() {
           {/* Floating Cart */}
           <AnimatePresence>
             {selectedItems.length > 0 && (
-              <motion.button
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0, opacity: 0 }}
-                onClick={handleOpenCart}
-                className="fixed bottom-[40px] right-[40px] w-[64px] h-[64px] bg-olive-green rounded-full flex items-center justify-center shadow-[0_10px_25px_rgba(85,107,47,0.3)] cursor-pointer z-40 border-none outline-none"
-              >
-                <div className="relative">
-                  <Gift color="white" size={24} strokeWidth={2} />
-                  <span className="absolute -top-[6px] -right-[10px] bg-sage-soft text-white w-[22px] h-[22px] rounded-full text-[11px] font-bold flex items-center justify-center border-2 border-white">
-                    {selectedItems.length}
-                  </span>
-                </div>
-              </motion.button>
+              <div className="fixed bottom-[24px] right-[24px] md:bottom-[40px] md:right-[40px] z-40 flex items-center gap-2.5 pointer-events-none">
+                {/* Floating Tooltip Label */}
+                <AnimatePresence>
+                  {showTooltip && (
+                    <motion.div
+                      initial={{ opacity: 0, x: 20, scale: 0.9 }}
+                      animate={{ opacity: 1, x: 0, scale: 1 }}
+                      exit={{ opacity: 0, x: 20, scale: 0.9 }}
+                      onClick={handleOpenCart}
+                      className="bg-white border border-[#EAEFE4] text-olive-green shadow-lg px-3.5 py-2 rounded-full text-[11px] font-bold uppercase tracking-wider cursor-pointer whitespace-nowrap flex items-center gap-1.5 pointer-events-auto select-none"
+                      style={{ originX: 1 }}
+                    >
+                      <span className="animate-pulse">Clique para presentear! 💝</span>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                {/* Floating Button */}
+                <motion.button
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0, opacity: 0 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={handleOpenCart}
+                  className="relative w-[60px] h-[60px] md:w-[64px] md:h-[64px] bg-olive-green rounded-full flex items-center justify-center shadow-[0_10px_25px_rgba(85,107,47,0.4)] cursor-pointer border-none outline-none pointer-events-auto"
+                >
+                  {/* Outer Pulsing Glow */}
+                  <span 
+                    className="absolute inset-0 rounded-full bg-olive-green/45 -z-10 animate-ping" 
+                    style={{ animationDuration: '3s' }}
+                  />
+                  
+                  <div className="relative">
+                    <Gift color="white" size={24} strokeWidth={2} />
+                    <span className="absolute -top-[6px] -right-[10px] bg-sage-soft text-white w-[22px] h-[22px] rounded-full text-[11px] font-bold flex items-center justify-center border-2 border-white">
+                      {selectedItems.length}
+                    </span>
+                  </div>
+                </motion.button>
+              </div>
             )}
           </AnimatePresence>
         </motion.div>
