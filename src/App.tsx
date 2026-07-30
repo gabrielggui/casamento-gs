@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Heart, Gift, Check, X, ChevronLeft, ChevronRight, Copy, Search, SlidersHorizontal } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
+import { Routes, Route, Link } from 'react-router-dom';
+import Invite from './components/Invite';
 
 // --- PIX helper ---
 function generatePixPayload(key: string, amount: number, senderName: string, productNames: string): string {
@@ -82,7 +84,7 @@ const PRODUCTS: Product[] = [
   { id: '19', name: 'Bebedouro de Água', price: 696.00, available: true, imageFallback: 'BA', imageUrl: 'https://m.magazineluiza.com.br/a-static/420x420/bebedouro-de-agua-esmaltec-de-coluna-refrigerado-por-compressor-egc35b/magazineluiza/010300601/a576ff560c4150012e9d9215562ddf09.jpg', category: 'Eletrodomésticos' }
 ];
 
-export default function App() {
+function Home() {
   const [loading, setLoading] = useState(true);
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -561,6 +563,9 @@ export default function App() {
               </g>
             </svg>
             <div className="font-serif text-olive-green italic mb-[2px] text-[18px]">Com carinho, Sara e Gabriel ❤️</div>
+            <Link to="/convite" className="mt-4 text-[#A0B090] hover:text-olive-green underline decoration-[#EAEFE4] hover:decoration-olive-green transition-colors text-[11px] uppercase tracking-wider">
+              Ver Convite Digital
+            </Link>
           </footer>
 
           {/* Floating Cart */}
@@ -769,5 +774,14 @@ export default function App() {
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/convite" element={<Invite />} />
+    </Routes>
   );
 }
