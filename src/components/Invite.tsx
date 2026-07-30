@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Sparkles, RotateCcw } from 'lucide-react';
-const closedInvite = 'assets/1000141698.jpg';
-const openInvite = 'http://163.176.240.65/assets/f114d751-5333-4f23-bf43-5a8ea7bdc392.png';
+const closedInvite = '/assets/convite1.png';
+const openInvite = '/assets/convite2.png';
 
 export default function Invite() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,9 +12,9 @@ export default function Invite() {
   const currentImage = isOpen ? openInvite : closedInvite;
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#f7f5f0] text-stone-800 flex flex-col items-center justify-between overflow-hidden h-screen w-screen select-none">
+    <div className="fixed inset-0 z-50 bg-[#baaa9c] text-stone-800 flex flex-col items-center justify-between overflow-hidden h-screen w-screen select-none">
       {/* Dynamic Ambient Blur Background based on current image - Light Mode */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10 bg-[#f7f5f0]">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10 bg-[#baaa9c]">
         <motion.img 
           key={isOpen ? 'bg-open' : 'bg-closed'}
           src={currentImage} 
@@ -23,11 +23,11 @@ export default function Invite() {
           animate={{ opacity: 0.6 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0 w-full h-full object-cover scale-[1.8] blur-[60px] filter brightness-110 saturate-[1.2] origin-center"
+          className="absolute inset-0 w-full h-full object-cover scale-[1.8] blur-[60px] filter brightness-125 saturate-[1.1] origin-center"
         />
-        <div className="absolute inset-0 bg-white/30 backdrop-blur-[10px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/20 to-white/90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-white/60" />
+        <div className="absolute inset-0 bg-white/40 backdrop-blur-[10px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#baaa9c]/50 via-[#baaa9c]/10 to-[#baaa9c]/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-transparent to-white/50" />
       </div>
 
       {/* Top Bar Navigation */}
