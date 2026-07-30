@@ -20,14 +20,14 @@ export default function Invite() {
           src={currentImage} 
           alt="" 
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }}
+          animate={{ opacity: 0.3 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0 w-full h-full object-cover scale-[1.8] blur-[60px] filter brightness-125 saturate-[1.1] origin-center"
+          className="absolute inset-0 w-full h-full object-cover scale-[1.8] blur-[60px] filter brightness-150 saturate-100 origin-center"
         />
-        <div className="absolute inset-0 bg-white/40 backdrop-blur-[10px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#baaa9c]/50 via-[#baaa9c]/10 to-[#baaa9c]/50" />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-transparent to-white/50" />
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-[10px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-[#baaa9c]/10 to-white/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-white/60" />
       </div>
 
       {/* Top Bar Navigation */}
